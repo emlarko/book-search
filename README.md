@@ -44,3 +44,5 @@ npm start
 After searching for a book on the application, the User is able to view an image of the book cover as well as a synopsis. 
 
 If the User has created an account and logged in, they will see a button to save the book. They will be able to see the books they have saved on their profile, as well as delete them.
+
+![book-search](https://github.com/emlarko/book-search/assets/101362057/0782e177-d66e-4d42-b2dc-1847825359c7)
