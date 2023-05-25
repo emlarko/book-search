@@ -2,24 +2,12 @@ const express = require('express');
 const { ApolloServer } = require('apollo-server-express');
 const path = require('path');
 const { authMiddleware } = require('./utils/auth');
-require("dotenv").config()
 
 const { typeDefs, resolvers } = require('./schemas');
 const db = require('./config/connection');
 
 const app = express();
 const PORT = process.env.PORT || 3001;
-
-mongoose
-.connect(
-    process.env.MONGODB_CONNECTION_STRING,
-        {
-          useNewUrlParser: true,
-          useUnifiedTopology: true,
-        }
-)
-.then(() => console.log("MongoDB has been connected"))
-.catch((err) => console.log(err));
 
 const startServer = async () => {
   const server = new ApolloServer({
